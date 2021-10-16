@@ -1,0 +1,221 @@
+body{
+background-image:linear-gradient(to right, black, red);
+background-attachment: fixed;
+}
+
+.grilla{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 25% 50% 25% ;
+    grid-template-rows:    250px 250px 250px 250px;
+    grid-template-areas:"Header   Header  Header"
+                        "Nav      Nav     Nav   "
+                        "Main     Main    Main  "
+                        "Footer   Footer  Footer";
+
+}
+header{
+    display: grid;
+    grid-area: Header;
+}
+nav{
+    display: grid;
+
+    grid-area: Nav;
+}
+main{
+    display: grid;
+    grid-area: Main;
+}
+footer{
+    display: grid;
+    grid-area: Footer;
+}
+
+h1{
+color: greenyellow;
+font-style: italic;
+font-size: 80px;
+font-family: 'Bebas Neue', cursive;
+text-align: center;
+background-color: black;
+}
+
+nav{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: right;
+}
+
+ul{
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+ul li{
+display: inline-block;
+}
+
+.Nav{
+color: greenyellow;
+font-style: italic;
+font-size: 30px;
+font-family:'Bebas Neue', cursive;
+display: block;
+text-decoration: none;
+padding:10px ;
+transition: 0.5s;
+}
+
+.Nav:hover{
+background-color: rgb(0, 0, 0);
+transform: rotateZ(360deg);
+}
+
+h1:hover{
+animation-name: aparecer;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+
+@keyframes aparecer{
+0%{opacity: 0;}
+100%{opacity: 1;}
+}
+
+h2{
+color: greenyellow;
+font-size: 35px;
+font-style: italic;
+font-family: 'Bebas Neue', cursive;
+}
+.Creacion{
+color: greenyellow;    
+font-size: 35px;
+font-style: italic;
+font-family: 'Bebas Neue', cursive;
+}
+.Boton{
+color: greenyellow;
+font-style: italic;
+font-size: 30px;
+font-family: 'Bebas Neue', cursive;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 115px;
+text-align: center; 
+transition: 1s;
+
+}
+.Botonera{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+padding: 10px;   
+}
+.Boton:hover{
+background-color: rgb(0, 0, 0);
+    
+}
+.Chewy img{
+width: 700px;
+height:300px;
+}
+.Chewy{
+width: 90%;
+margin: auto;
+list-style: none;
+padding: 60px;
+box-sizing: border-box;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+
+.Galeria{
+width: 90%;
+margin: auto;
+list-style: none;
+padding: 20px;
+box-sizing: border-box;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.Galeria li{
+margin: 5px;
+}
+
+.Galeria img{
+width: 200px;
+height: 150px;
+}
+
+.Imagen{
+width: 150%;
+height: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.Galeria img{
+transition:all 300ms;
+position:-ms-page;
+}
+.Galeria :hover{
+transform:scale(1.4,1.4);
+}
+
+
+@media only screen and (max-width :600px){
+ .grilla{
+    grid-template-columns: 25% 25%  ;
+    grid-template-rows:    250px 50px 250px 100px;
+    grid-template-areas:"Header  Header  "
+                        "Nav     Nav   "
+                        "Main    Main  "
+                        "Footer  Footer ";
+                         
+ }
+}
+@media only screen and (min-width : 600px){
+ .grilla{
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows:    150px 150px 200px 50px;
+    grid-template-areas: "Header  Header  Header  "
+                         "Nav     Nav     Nav"
+                         "Main    Main    Main  "
+                         "Footer  Footer Footer";
+                             
+
+}
+}
+
+@media only screen and (min-width :768px){
+    .grilla{
+        grid-template-columns: 25% 25% 25% 25% ;
+        grid-template-rows:    250px 150px 230px 100px;
+        grid-template-areas:"Header  Header  Header  Header"
+                            "Main    Main    Nav     Nav   "
+                            "Main    Main    Nada    Nada  "
+                            "Footer  Footer  Footer  Footer";
+                             
+}
+}
+
+@media only screen and (min-width :992px){
+    .grilla{
+        grid-template-columns: 25% 25% 25% 25% ;
+        grid-template-rows:    200px 150px 250px 100px;
+        grid-template-areas:"Header  Header  Header  Header"
+                            "Nav     Nav     Nav     Nav   "
+                            "Main    Main    Main    Main"
+                            "Footer  Footer  Footer  Footer";
+                             
+}
+}
